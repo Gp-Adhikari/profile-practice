@@ -1,5 +1,9 @@
 import { createContext, useState, useEffect } from "react";
 
+import nishan from "../img/nishan.png";
+import puja from "../img/puja.png";
+import sangita from "../img/sangita.png";
+
 export const UserContext = createContext();
 
 const UserContextProvider = ({ children }) => {
@@ -19,14 +23,83 @@ const UserContextProvider = ({ children }) => {
 
   /********************************************************
    * Yo code chai loading ramrari dekhauna ko lagi thorai *
-   * delay rakheko. 3 seconds ko delay xa.                *
+   * delay rakheko. 3 seconds ko delay xa. + TROLL        *
    *******************************************************/
   useEffect(() => {
     try {
+      const person = ["puja", "", "nishan", "", "sangita"];
+
+      const random = Math.floor(Math.random() * person.length);
+
       setTimeout(() => {
-        fetch(URL)
-          .then((res) => res.json())
-          .then((user) => setUser(user.results[0]));
+        if (person[random] === "") {
+          fetch(URL)
+            .then((res) => res.json())
+            .then((user) => setUser(user.results[0]));
+        }
+
+        if (person[random] === "puja") {
+          const pujaObj = {
+            name: {
+              title: "Miss",
+              first: "Puja",
+              last: "Hashtag",
+            },
+            gender: "Female",
+            email: "puja.hashtag@gmail.com",
+            nat: "NP",
+            location: {
+              state: "Bagmati",
+              city: "Bhaktapur",
+            },
+            picture: {
+              large: puja,
+            },
+          };
+          setUser(pujaObj);
+        }
+
+        if (person[random] === "nishan") {
+          const nishanObj = {
+            name: {
+              title: "Mr",
+              first: "Savyata",
+              last: "Ko Buda",
+            },
+            gender: "Male",
+            email: "ilove.savyata@gmail.com",
+            nat: "NP",
+            location: {
+              state: "Bagmati",
+              city: "Bhaktapur",
+            },
+            picture: {
+              large: nishan,
+            },
+          };
+          setUser(nishanObj);
+        }
+
+        if (person[random] === "sangita") {
+          const sangitaObj = {
+            name: {
+              title: "Miss",
+              first: "Pudki",
+              last: "1.6",
+            },
+            gender: "Female",
+            email: "pudki.keimah@gmail.com",
+            nat: "NP",
+            location: {
+              state: "Bagmati",
+              city: "Bhaktapur",
+            },
+            picture: {
+              large: sangita,
+            },
+          };
+          setUser(sangitaObj);
+        }
       }, 3000);
     } catch (error) {}
   }, []);
