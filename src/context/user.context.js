@@ -64,7 +64,7 @@ const UserContextProvider = ({ children }) => {
             name: {
               title: "Mr",
               first: "Savyata",
-              last: "Ko Buda",
+              last: "Ko Buda Mah",
             },
             gender: "Male",
             email: "ilove.savyata@gmail.com",
@@ -88,7 +88,7 @@ const UserContextProvider = ({ children }) => {
               last: "1.6",
             },
             gender: "Female",
-            email: "pudki.keimah@gmail.com",
+            email: "pudki.ketimah@gmail.com",
             nat: "NP",
             location: {
               state: "Bagmati",
