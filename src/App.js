@@ -4,11 +4,23 @@ import { UserContext } from "./context/user.context";
 import menuIcon from "./img/menu.svg";
 import searchIcon from "./img/search.svg";
 
+import "./css/loading.css";
+
 const App = () => {
   const { user } = useContext(UserContext);
 
   if (user === null) {
-    return <h1>Loading...</h1>;
+    return (
+      <div class="wrapper">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="shadow"></div>
+        <div class="shadow"></div>
+        <div class="shadow"></div>
+        <span>Loading</span>
+      </div>
+    );
   } else {
     return (
       <div className="container">
@@ -38,7 +50,6 @@ const App = () => {
 
         <section>
           <div className="img-side">
-            {/* <div className="img"></div> */}
             <img src={user.picture.large} alt={user.name.first} />
           </div>
           <div className="content">

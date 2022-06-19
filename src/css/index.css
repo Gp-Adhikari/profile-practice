@@ -8,12 +8,12 @@
 }
 
 ::-moz-selection {
-  background: #f9b301;
+  background: #EA455F;
   color: #000;
 }
 
 ::selection {
-  background: #f9b301;
+  background: #EA455F;
   color: #000;
 }
 
@@ -29,7 +29,7 @@ body {
           justify-content: center;
   height: 100vh;
   width: 100%;
-  background-color: #f9b301;
+  background-color: #EA455F;
 }
 
 .container {
@@ -44,7 +44,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: #f9b301;
+  background-color: #EA455F;
   width: 30%;
   height: 100%;
 }
@@ -124,7 +124,7 @@ body {
   left: 0;
   width: 0%;
   height: 8px;
-  background-color: #f9b301;
+  background-color: #EA455F;
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 }
@@ -208,16 +208,17 @@ body {
 }
 
 .container section .content .news-letter button {
+  color: #fff;
   border: none;
-  background-color: #f9b301;
+  background-color: #EA455F;
   padding: 0.5rem 1rem;
   cursor: pointer;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
-  border: 1px solid #f9b301;
+  border: 1px solid #EA455F;
 }
 
 .container section .content .news-letter button:hover {
-  -webkit-box-shadow: 0 0 10px 2px #f9b301;
-          box-shadow: 0 0 10px 2px #f9b301;
+  -webkit-box-shadow: 0 0 10px 2px #EA455F;
+          box-shadow: 0 0 10px 2px #EA455F;
 }
